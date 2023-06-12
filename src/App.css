@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --first-color: rgb(97, 97, 182);;
+    --white-color: #fff;
+    --gray-color: rgb(189, 187, 187);
+    --shadow-general: 0 .5rem 1rem rgba(0,0,0,.50);
+}
+
+input, button {
+    font-family: inherit;
+}
+
+input {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* .bx {
+    font-size: 1.5em;
+} */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.head button {
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.4em;
+    background-color: var(--first-color);
+    color: white;
+    filter: grayscale(0.3);
+    cursor: pointer;
+}
+
+.head button:hover {
+    filter: grayscale(0);
+}
+
+.cards_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+    justify-items: center;
+    padding: 1em;
+    gap: 1.5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.4em;
+    border: solid 1.5px black;
+    gap: 0.5em;
+    width: 90%;
+    padding: 1em;
+    box-shadow: var(--shadow-general);
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+.card span {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--gray-color);
+}
+
+.card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.card_btns {
+    display: flex;
+    justify-content: end;
+    gap: 0.5em;
+}
+
+.card_btns .bx{
+    font-size: 2em;
+}
+
+.bx-trash {
+    color: red;
+    padding: 0.1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+.bx-edit {
+    padding: 0.1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
