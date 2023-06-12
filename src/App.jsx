@@ -33,7 +33,7 @@ function App() {
         <div className='head'>
           <h1>Users</h1>
           <button onClick={handleOpenForm}>
-            <h2>Open Form</h2>
+            <h2>+ Add a new user</h2>
           </button>
         </div>
         <div className={`form_container ${isCloseForm && 'form_close'}`} >
