@@ -15,7 +15,7 @@
 
 .form {
     flex-direction: column;
-    background-color: white;
+    background-color: #202020;
     padding: 2em 1.5em 2.5em;
     border-radius: 0.7em;
     width: 100%;
@@ -32,6 +32,7 @@
     justify-content: end;
     cursor: pointer;
     transition: color 0.5s;
+    color: white;
 }
 
 .bx-x:hover{
@@ -40,7 +41,7 @@
 
 .form_title {
     text-align: center;
-    color: rgb(20, 20, 101);
+    color: var(--second-white-color);
     margin-bottom: 0.5em;
     font-weight: 700;
     text-transform: uppercase;
@@ -57,6 +58,7 @@
     font-size: 1rem;
     font-weight: 400;
     margin-left: 1em;
+    color: var(--second-white-color);
 }
 
 .form_input {
@@ -74,14 +76,15 @@
     padding: 0.5em 1em;
     border: none;
     border-radius: 0.5em;
-    background-color: rgb(97, 97, 182);
-    color: white;
+    background-color: var(--first-color);
+    color:#202020;
     cursor: pointer;
     filter: grayscale(0.5);
     margin-top: 2em;
 }
 
 .form_btn:hover{
-    filter: grayscale(0);
+    box-shadow: var(--shadow-white);
+    color: white;
 }
 

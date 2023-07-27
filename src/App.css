@@ -13,6 +13,7 @@
     --second-white-color: #ffffff;
     --gray-color: rgb(36, 35, 35);
     --shadow-general: 0 .5rem 1rem rgba(0,0,0,.50);
+    --shadow-white: 0 .1rem 0.5rem rgba(122, 120, 120, 0.5);
 }
 
 input, button {
