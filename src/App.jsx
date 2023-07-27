@@ -1,43 +1,37 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import useFetch from './utils/useFetch'
-import FormUsers from './components/FormUsers'
-import UserCard from './components/UserCard'
+import { useEffect, useState } from "react";
+import "./App.css";
+import useFetch from "./utils/useFetch";
+import FormUsers from "./components/FormUsers";
+import UserCard from "./components/UserCard";
 
 function App() {
+  const [isCloseForm, setIsCloseForm] = useState(true);
 
-  const [isCloseForm, setIsCloseForm] = useState(true)
+  const [updateInfo, setUpdateInfo] = useState();
 
-  const [updateInfo, setUpdateInfo] = useState()
-
-  const baseUrl ='https://users-crud.academlo.tech/'
-  const [
-    users,
-    getAllUsers,
-    createNewUser,
-    deleteUserById,
-    updateUserById
-  ] = useFetch(baseUrl)
+  const baseUrl = "https://users-crud-api-r11q.onrender.com/api/v1";
+  const [users, getAllUsers, createNewUser, deleteUserById, updateUserById] =
+    useFetch(baseUrl);
 
   useEffect(() => {
-    getAllUsers('/users')
-  }, [])
-  
+    getAllUsers("/users");
+  }, []);
+
   const handleOpenForm = () => {
-    setIsCloseForm(false)
-  }
+    setIsCloseForm(false);
+  };
 
   return (
-    <div className='container'>
-      <div className='app'>
-        <div className='head'>
+    <div className="container">
+      <div className="app">
+        <div className="head">
           <h1>Users</h1>
           <button onClick={handleOpenForm}>
             <h2>+ Add a new user</h2>
           </button>
         </div>
-        <div className={`form_container ${isCloseForm && 'form_close'}`} >
-          <FormUsers 
+        <div className={`form_container ${isCloseForm && "form_close"}`}>
+          <FormUsers
             createNewUser={createNewUser}
             updateInfo={updateInfo}
             updateUserById={updateUserById}
@@ -45,23 +39,20 @@ function App() {
             setIsCloseForm={setIsCloseForm}
           />
         </div>
-        <div className='cards_container'>
-          {
-            users?.map(user => (
-              <UserCard 
-                key={user.id}
-                user={user}
-                deleteUserById={deleteUserById}
-                setUpdateInfo={setUpdateInfo}
-                setIsCloseForm={setIsCloseForm}
-              />
-            ))
-          }
+        <div className="cards_container">
+          {users?.map((user) => (
+            <UserCard
+              key={user.id}
+              user={user}
+              deleteUserById={deleteUserById}
+              setUpdateInfo={setUpdateInfo}
+              setIsCloseForm={setIsCloseForm}
+            />
+          ))}
         </div>
       </div>
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;

@@ -8,9 +8,10 @@
 }
 
 :root {
-    --first-color: rgb(97, 97, 182);;
-    --white-color: #fff;
-    --gray-color: rgb(189, 187, 187);
+    --first-color: rgba(171, 171, 175, 0.562);;
+    --white-color: #202020;
+    --second-white-color: #ffffff;
+    --gray-color: rgb(36, 35, 35);
     --shadow-general: 0 .5rem 1rem rgba(0,0,0,.50);
 }
 
@@ -35,6 +36,7 @@ ul {
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: #202020;
 }
 
 .app {
@@ -49,6 +51,10 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+}
+
+.head h1 {
+    color: var(--second-white-color);
 }
 
 .head button {
@@ -105,18 +111,25 @@ ul {
     gap: 0.5em;
 }
 
+.card_btns button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5em;
+}
+
 .card_btns .bx{
     font-size: 2em;
 }
 
 .bx-trash {
-    color: red;
+    color: rgb(138, 30, 30);
     padding: 0.1em;
     border-radius: 0.2em;
     cursor: pointer;
 }
 
 .bx-edit {
+    color:#202020;
     padding: 0.1em;
     border-radius: 0.2em;
     cursor: pointer;
